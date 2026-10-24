@@ -1,102 +1,84 @@
 # 🏕️ The Wild Oasis
 
-**The Wild Oasis** is a comprehensive internal management application built for a boutique cabin hotel. It allows hotel employees to manage cabins, bookings, guests, and overall resort settings through a highly interactive, data-driven dashboard.
+**The Wild Oasis** is a full-featured, internal management application designed for boutique cabin hotels and luxury resorts. It provides a highly interactive, data-driven dashboard for hospitality staff to streamline day-to-day business operations—including guest management, check-in/check-out execution, booking lifecycles, and remote inventory administration.
 
-This project was built as the capstone application in Jonas Schmedtmann's [Ultimate React Course on Udemy](https://udemy.com). It demonstrates advanced React patterns, professional state management, real-time data integration, and complex UI design.
-
-🔗 **Live Demo:** [Insert your Netlify URL here]
+🔗 **Live Demo:** https://the-wild-oasis-one.netlify.app
 
 ---
 
-## 🚀 Features
+## 🚀 Key Features
 
-### 📊 Dashboard & Analytics
+### 📊 Operations Dashboard & Analytics
 
-- **Daily Statistics:** Tracks stay duration, check-ins, sales, and overall occupancy rate.
-- **Dynamic Graphs:** Displays visual analytics for recent sales and stay durations over 7, 30, or 90 days.
-- **Activity Tracker:** Real-time visibility into today's expected check-ins and check-outs.
+- **Real-Time KPIs:** Tracks critical operational metrics including total stay duration, recent sales revenue, check-in activity, and overall cabin occupancy rates.
+- **Trend Analysis:** Visualises recent sales metrics and historical stay durations over configurable 7, 30, or 90-day analytics intervals.
+- **Daily Activity Feed:** Aggregates and displays actionable item alerts for scheduled guest arrivals and departures on the current calendar day.
 
-### 📅 Booking Management
+### 📅 Advanced Booking Engine
 
-- **Complete Booking Lifecycle:** Full control over guest check-in, check-out, and booking cancellation.
-- **Optional Add-ons:** Ability to add breakfast options or track payment status at the time of check-in.
-- **Advanced Tables:** Features multi-layered server-side sorting, filtering, and seamless pagination.
+- **Full Booking Lifecycle:** Provides front-desk managers control over standard check-ins, departures, and cancellations.
+- **Dynamic Add-Ons:** Enables staff to apply cabin features (like breakfast packages) and update transactional invoice statuses dynamically during check-in.
+- **Data Presentation:** Leverages multi-layered server-side filtering, multi-column sorting, and asynchronous pagination grids.
 
-### 🪵 Cabin Administration
+### 🪵 Cabin & Inventory Administration
 
-- **Full CRUD Operations:** Seamlessly create, read, update, and delete cabin entries.
-- **Media Uploads:** Directly uploads and replaces cabin images in remote cloud storage.
-- **Duplicate Feature:** Quick one-click duplication of existing cabins for faster management.
+- **Granular Inventory Control:** Supports full CRUD workflows to instantly deploy, view, modify, or decommission cabin listings.
+- **Cloud Asset Pipeline:** Connects directly with remote storage engines to upload, store, and refresh high-resolution marketing assets instantly.
+- **Duplication Engine:** Features one-click template replication rules to generate clone entries of existing cabin configurations.
 
-### ⚙️ System Settings & Authentication
+### ⚙️ System Settings & Enterprise Security
 
-- **Global Rules:** Dynamic adjustment of hotel-wide variables (e.g., breakfast price, minimum/maximum nights).
-- **Secure Access:** Built-in user signups, multi-user authentication, and profile updates (avatars/passwords).
-- **Theme Customization:** A fully integrated dark/light mode toggle stored seamlessly in local state.
-
----
-
-## 🛠️ Tech Stack
-
-- **Frontend Framework:** React (via Vite)
-- **Styling & UI:** Styled Components
-- **State Management & Data Fetching:** React Query (TanStack Query)
-- **Routing:** React Router
-- **Backend & Database:** Supabase (PostgreSQL database, Authentication, and Object Storage)
-- **Form Handling:** React Hook Form
-- **Charts & Visuals:** Recharts
-- **Helper Libraries:** React Icons, Date-fns, Hot Toast
+- **Global Variable Control:** Enables instant runtime overrides for hotel-wide policies (e.g., dynamic breakfast pricing, global minimum/maximum booking caps).
+- **Identity Management:** Restricts dashboard access behind secure multi-user credentials, complete with individual profile customization (avatars and account password rotations).
+- **Adaptive Interface:** Implements a localized dark and light visual layout theme state that saves seamlessly across browser instances.
 
 ---
 
-## 💻 Getting Started
+## 🛠️ Technical Architecture & Stack
+
+This production-ready control system is built utilizing enterprise frontend engineering standards and decoupled cloud workflows:
+
+- **Core UI Architecture:** React framework powered by Vite for optimised developer tooling and fast deployment bundles.
+- **Style Delivery:** Structured entirely via Styled Components to maintain modular, fully encapsulated layout layers.
+- **Asynchronous State Management:** Utilizes TanStack Query (React Query) to orchestrate data-fetching operations, smart server-side caching, aggressive request pre-fetching, and optimistic interface updates.
+- **Navigation Engine:** Routed via declarative, declarative single-page application paths protected by strict authentication wrappers.
+- **Database & Cloud Storage Infrastructure:** Built upon a scalable Supabase (PostgreSQL) backend, securing relational table definitions, distinct bucket policies, and encrypted JWT user schemas.
+- **Form Schemas:** Managed via React Hook Form to provide robust, non-intrusive runtime client-side data validation.
+- **Data Graphic Rendering:** Implements Recharts to transform backend analytical collections into responsive SVGs.
+
+---
+
+## 💻 Local Setup & Development
 
 ### Prerequisites
 
-Make sure you have Node.js installed on your machine.
+Ensure that Node.js (LTS version recommended) is available on your local operating system environment.
 
-### Installation
+### Steps to Deploy Locally
 
-1. **Clone the repository:**
+1. **Clone the master source directory:**
 
    ```bash
    git clone https://github.com
    cd the-wild-oasis
    ```
 
-2. **Install dependencies:**
+2. **Provision local node modules:**
 
    ```bash
    npm install
    ```
 
-3. **Set up Environment Variables:**
-   Create a `.env` file in the root directory of your project and populate it with your Supabase credentials:
+3. **Configure Environment Secrets:**
+   Establish a root `.env` config file containing your dedicated database API endpoints:
 
    ```env
-   VITE_SUPABASE_URL=your_supabase_project_url
-   VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+   VITE_SUPABASE_URL=your_production_supabase_endpoint_url
+   VITE_SUPABASE_ANON_KEY=your_production_supabase_public_anon_key
    ```
 
-4. **Run the development server:**
+4. **Boot up the local runtime server:**
    ```bash
    npm run dev
    ```
-   Open your browser and navigate to `http://localhost:5173` to view the application.
-
----
-
-## 🏗️ Architecture & Core Concepts
-
-This application serves as a portfolio piece showcasing advanced frontend engineering patterns:
-
-- **Declarative Routing:** Structured using protected routes to guarantee data privacy and role safety.
-- **Remote State Integration:** Leverages React Query for seamless caching, optimistic UI updates, and effortless pre-fetching.
-- **Compound Component Pattern:** Implemented across complex UI modules like Modals, Tables, Context Menus, and Window Overlays for maximum code reusability.
-- **Database Optimization:** Built around highly organized relational schemas, foreign-key connections, and custom storage bucket API rules in Supabase.
-
----
-
-## 📄 License
-
-This project was built for educational purposes as part of the Ultimate React Course. Feel free to use the code to study or build your personal portfolio.
+   Open your target browser instance and navigate to `http://localhost:5173` to explore the administration panel locally.
