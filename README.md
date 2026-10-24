@@ -30,7 +30,7 @@
 
 - **Global Variable Control:** Enables instant runtime overrides for hotel-wide policies (e.g., dynamic breakfast pricing, global minimum/maximum booking caps).
 - **Identity Management:** Restricts dashboard access behind secure multi-user credentials, complete with individual profile customization (avatars and account password rotations).
-- **Adaptive Interface:** Implements a localized dark and light visual layout theme state that saves seamlessly across browser instances.
+- **Adaptive Interface:** Implemented a localized dark and light visual layout theme state that saves seamlessly across browser instances.
 
 ---
 
@@ -44,7 +44,7 @@ This production-ready control system is built utilizing enterprise frontend engi
 - **Navigation Engine:** Routed via declarative, declarative single-page application paths protected by strict authentication wrappers.
 - **Database & Cloud Storage Infrastructure:** Built upon a scalable Supabase (PostgreSQL) backend, securing relational table definitions, distinct bucket policies, and encrypted JWT user schemas.
 - **Form Schemas:** Managed via React Hook Form to provide robust, non-intrusive runtime client-side data validation.
-- **Data Graphic Rendering:** Implements Recharts to transform backend analytical collections into responsive SVGs.
+- **Data Graphic Rendering:** Implemented Recharts to transform backend analytical collections into responsive SVGs.
 
 ---
 
